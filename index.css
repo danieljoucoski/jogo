@@ -1,7 +1,37 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     padding: 20px;
+
+
 }
+.botao{
+    position: absolute;
+    right: 100px;
+    top: 300px;
+}
+.sim{
+    border: 1px solid #000000;
+    width: 300PX;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    max-width: 100%;
+    cursor: pointer;
+    background-color: rgb(10, 230, 10);
+    text-align: center;
+    font-size: 100PX;
+}
+.nao{
+    border: 1px solid #000000;
+    width: 300PX;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    max-width: 100%;
+    cursor: pointer;
+    background-color: rgb(230, 10, 10);
+    text-align: center;
+    font-size: 100PX;
+}
+
 
 .num{
     border: 1px solid #ccc;
@@ -12,6 +42,7 @@ body {
     max-width: 100%;
     display: flex;
     flex-wrap: wrap;
+    background-color: rgba(211, 211, 211, 0.911);
 }
 
  .card {
@@ -19,8 +50,8 @@ body {
     padding: 15px;
     border-radius: 8px;
     width: fit-content;
-    
+    background-color: rgb(74, 164, 74);
     display: grid;
-    grid-template-columns: repeat(4, auto); /* 4 colunas */
-    gap: 15px; /* Espaço entre os blocos */
+    grid-template-columns: repeat(8, auto);
+    gap: 15px;
 }
