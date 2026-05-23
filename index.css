@@ -1,8 +1,6 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     padding: 20px;
-
-
 }
 .botao{
     position: absolute;
@@ -31,8 +29,6 @@ body {
     text-align: center;
     font-size: 100PX;
 }
-
-
 .num{
     border: 1px solid #ccc;
     padding: 15px;
