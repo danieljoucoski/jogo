@@ -5,6 +5,10 @@
     <link rel="stylesheet" href="index.css">
     <title>tabela1</title>
 </head>
+    <script src="java.js">
+localStorage.setItem("valor", 0);
+
+    </script>
 <body>
     <h1>Seu número esta na tabela abaixo?</h1>
     <div class="card">
@@ -42,11 +46,9 @@
         <div class="num"><h1>63</h1></div> 
     </div>
     <div class="botao">
-        <button class="sim" onclick="window.location.href='tabela2.html';adicionar(2)">Sim</button>
-        <button class="nao">Não</button>
+        <button class="sim" onclick="adicionar(1); window.location.href='tabela2.html'">Sim</button>
+        <button class="nao" onclick="window.location.href='tabela2.html'">Não</button>
     </div>
-
-    <script src="java.js"></script>
 </body>
 </html>
 

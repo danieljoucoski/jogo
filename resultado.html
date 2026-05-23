@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>resultado</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body style="background-color: rgba(128, 128, 128, 0.711);">
+    
+  <div class="resultado">
+    <p>Seu número é:<p>
+    <p id="numero"></p>
+</div>
+
+<script>
+window.onload = function () {
+    let valor = localStorage.getItem("valor") || 0;
+    document.getElementById("numero").innerText = valor;
+};
+</script>
+<div class="resultado">
+<button class="voltar" onclick="localStorage.setItem('valor',0);window.location.href='menu.html'">Voltar ao inicio</button>
+</div>
+</body>
+</html>

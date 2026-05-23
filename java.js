@@ -1,7 +1,8 @@
-let valor = localStorage.getItem("valor") || 0;
+let valor = Number(localStorage.getItem("valor")) || 0;
 
 function adicionar(numero) {
-    valor = Number(valor) + numero;
+
+    valor = valor + numero;
 
     localStorage.setItem("valor", valor);
 
