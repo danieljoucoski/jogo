@@ -5,6 +5,51 @@
     <title>menu</title>
     <link rel="stylesheet" href="index.css">
 <link href="https://fonts.googleapis.com/css2?family=Bellota&family=Alice&display=swap" rel="stylesheet">
+<style>
+    /* 1. Definição de Variáveis de Cores */
+    :root {
+      --bg-principal: #ffffff;
+      --texto-principal: #222222;
+      --bg-botao: #222222;
+      --texto-botao: #ffffff;
+    }
+
+    /* Cores aplicadas quando o body tiver a classe .dark */
+    body.dark {
+      --bg-principal: #121212;
+      --texto-principal: #f0f0f0;
+      --bg-botao: #ffffff;
+      --texto-botao: #222222;
+    }
+
+    /* 2. Estilização da Página */
+    body {
+      background-color: var(--bg-principal);
+      color: var(--texto-principal);
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      /* Transição suave ao mudar de cor */
+      transition: background-color 0.3s ease, color 0.3s ease; 
+    }
+
+    /* Estilo do Botão */
+    #botao-tema {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      background-color: var(--bg-botao);
+      color: var(--texto-botao);
+      font-weight: bold;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+  </style>
 </head>
 <body>
     <h3>Jogo do adivinha</h3>
@@ -14,5 +59,35 @@
     <div class="resultado">
         <button class="voltar" onclick="localStorage.setItem('valor',0);window.location.href='tabela1.html'">Iniciar</button>
     </div>
+    
+  <h1>Exemplo de Modo Escuro</h1>
+  <p>Clique no botão abaixo para alternar o tema manualmente.</p>
+  
+  <!-- O Botão -->
+  <button id="botao-tema">Alternar Tema</button>
+
+  <script>
+    // 3. Lógica do JavaScript
+    const botao = document.getElementById('botao-tema');
+
+    // Verifica se o usuário já visitou o site antes e tinha escolhido o modo escuro
+    if (localStorage.getItem('tema-salvo') === 'escuro') {
+      document.body.classList.add('dark');
+    }
+
+    // Escuta o clique do botão
+    botao.addEventListener('click', () => {
+      // Adiciona a classe se não existir, ou remove se já existir
+      document.body.classList.toggle('dark');
+      
+      // Salva a escolha atual no navegador para lembrar na próxima visita
+      if (document.body.classList.contains('dark')) {
+        localStorage.setItem('tema-salvo', 'escuro');
+      } else {
+        localStorage.setItem('tema-salvo', 'claro');
+      }
+    });
+  </script>
+
 </body>
 </html>
